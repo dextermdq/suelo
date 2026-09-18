@@ -44,6 +44,7 @@ export default defineConfig({
       '@ports': path.resolve(__dirname, './src/ports'),
       '@adapters': path.resolve(__dirname, './src/adapters'),
       '@ui': path.resolve(__dirname, './src/ui'),
+      '@config': path.resolve(__dirname, './config'),
     },
   },
   server: {

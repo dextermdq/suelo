@@ -115,7 +115,7 @@ export function reducirEventos(eventos: Evento[]): EstadoDerivado {
     } else if (evento.tipo === 'FASE_CAMBIADA') {
       estado.fase_actual = evento.fase_nueva
       estado.historial_fases.push({
-        fecha: new Date(evento.timestamp).toISOString().split('T')[0],
+        fecha: new Date(evento.timestamp).toISOString().split('T')[0]!,
         fase: evento.fase_nueva,
         razon: evento.razon,
       })

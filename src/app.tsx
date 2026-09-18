@@ -1,10 +1,12 @@
 import React, { useReducer, useEffect } from 'react'
-import { appReducer, initialState, AppState, AppAction } from './ui/state/AppState'
+import { appReducer, initialState } from './ui/state/AppState'
 import { PantallaInicio } from './ui/screens/PantallaInicio'
-import { validarPrograma, Programa } from './config/esquema'
+import { PantallaRutina } from './ui/screens/PantallaRutina'
+import { PantallaGuia } from './ui/screens/PantallaGuia'
+import { PantallabitÁcora } from './ui/screens/PantallabitÁcora'
+import { validarPrograma } from '@config/esquema'
 import { reducirEventos } from './core/eventos'
 import { IdbRepo } from './adapters/idb/IdbRepo'
-import { RealClock } from './adapters/fake/FakeClock'
 import yaml from 'js-yaml'
 import './index.css'
 
@@ -73,7 +75,15 @@ export const App: React.FC = () => {
       {state.pantallaActual === 'inicio' && (
         <PantallaInicio state={state} dispatch={dispatch} />
       )}
-      {/* Otras pantallas irían acá */}
+      {state.pantallaActual === 'rutina' && (
+        <PantallaRutina state={state} dispatch={dispatch} />
+      )}
+      {state.pantallaActual === 'guia' && (
+        <PantallaGuia state={state} dispatch={dispatch} />
+      )}
+      {state.pantallaActual === 'bitacora' && (
+        <PantallabitÁcora state={state} dispatch={dispatch} />
+      )}
     </div>
   )
 }

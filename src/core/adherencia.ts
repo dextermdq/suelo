@@ -107,7 +107,7 @@ export function calcularAdherenciaSemanal(
   }
 
   // Calcular porcentaje por ejercicio
-  for (const [id, stats] of porEjercicio) {
+  for (const [_id, stats] of porEjercicio) {
     stats.porcentaje =
       stats.necesarios > 0 ? (stats.completados / stats.necesarios) * 100 : 0
   }
@@ -133,8 +133,8 @@ export function calcularAdherenciaSemanal(
   return {
     numero_semana: numeroSemana,
     ano,
-    lunes: dias[0],
-    domingo: dias[6],
+    lunes: dias[0]!,
+    domingo: dias[6]!,
     porcentaje_general: porcentajeGeneral,
     por_ejercicio: porEjercicio,
     por_dia: porDia,

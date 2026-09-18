@@ -20,7 +20,7 @@ export const PantallaInicio: React.FC<PantallaInicioProps> = ({
     state.estado,
     state.programa,
     state.faseActual,
-    new Date().toISOString().split('T')[0],
+    new Date().toISOString().split('T')[0]!,
   )
 
   return (

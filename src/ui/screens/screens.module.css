@@ -170,3 +170,225 @@
     color: #a7f3d0;
   }
 }
+
+/* Ejercicios list */
+.ejerciciosList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ejercicioItem {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ejercicioItem:active {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.ejercicioItem.completado {
+  background: #d1fae5;
+  border-color: #10b981;
+}
+
+.ejercicioTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox {
+  font-size: 1.5rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.ejercicioTitle h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.ejercicioMeta {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-left: 2.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ejercicioItem {
+    background: #1f2937;
+    border-color: #374151;
+  }
+  .ejercicioItem:active {
+    background: #111827;
+  }
+  .ejercicioItem.completado {
+    background: #064e3b;
+    border-color: #10b981;
+  }
+  .ejercicioTitle h3 {
+    color: #f3f4f6;
+  }
+  .ejercicioMeta {
+    color: #9ca3af;
+  }
+}
+
+/* Timer box */
+.timerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  color: #3b82f6;
+  text-align: center;
+}
+
+.buttonSmall {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  background: white;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.buttonSmall:active {
+  background: #eff6ff;
+}
+
+.buttonDanger {
+  padding: 0.75rem 1.5rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.buttonDanger:active {
+  background: #dc2626;
+}
+
+.buttonSuccess {
+  padding: 0.75rem 1.5rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  min-height: 3rem;
+}
+
+.buttonSuccess:active {
+  background: #059669;
+}
+
+/* Input groups */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.slider {
+  width: 100%;
+  height: 0.5rem;
+  accent-color: #3b82f6;
+}
+
+.sliderValue {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.trendValue {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.trendDirection {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0.5rem 0 0 0;
+  text-transform: capitalize;
+}
+
+.dataCount {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0.5rem 0 0 0;
+}
+
+.metadata {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.evidencia {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+@media (prefers-color-scheme: dark) {
+  .timerBox {
+    background: #1f2937;
+  }
+  .timer {
+    color: #60a5fa;
+  }
+  .buttonSmall {
+    background: #1f2937;
+    color: #60a5fa;
+    border-color: #60a5fa;
+  }
+  .inputGroup label {
+    color: #f3f4f6;
+  }
+  .sliderValue {
+    color: #60a5fa;
+  }
+  .trendValue {
+    color: #f3f4f6;
+  }
+  .metadata,
+  .evidencia {
+    color: #9ca3af;
+  }
+}

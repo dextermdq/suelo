@@ -1,7 +1,6 @@
-import { Programa, Criterio, Fase } from '../../config/esquema'
+import { Programa, Criterio } from '../../config/esquema'
 import { EstadoDerivado } from './eventos'
 import { calcularAdherenciaSemanal } from './adherencia'
-import { calcularTendenciasSemanal } from './tendencias'
 
 export type ResultadoCriterio = 'cumplido' | 'no_cumplido' | 'datos_insuficientes'
 
@@ -122,8 +121,8 @@ function evaluarCriterio(
         }
       }
 
-      const primerDia = estado.dias.get(diasOrdenados[0])
-      const ultimoDia = estado.dias.get(diasOrdenados[diasOrdenados.length - 1])
+      const primerDia = estado.dias.get(diasOrdenados[0]!)
+      const ultimoDia = estado.dias.get(diasOrdenados[diasOrdenados.length - 1]!)
 
       const sintomasInicio = primerDia?.registro_diario?.sintomas ?? 0
       const sintomasUltimo = ultimoDia?.registro_diario?.sintomas ?? 0

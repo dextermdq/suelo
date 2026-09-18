@@ -1,5 +1,5 @@
 import { EstadoDerivado } from '../../core/eventos'
-import { Programa } from '../../config/esquema'
+import { Programa } from '@config/esquema'
 
 export interface AppState {
   // Datos

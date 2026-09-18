@@ -1,5 +1,4 @@
 import { EstadoDerivado } from './eventos'
-import { diasDeLaSemana } from './semana'
 
 export interface Tendencia {
   fecha: string
@@ -31,7 +30,7 @@ export function calcularPromedioMovil(
   for (let i = 0; i < dias; i++) {
     const d = new Date(fechaTarget)
     d.setDate(d.getDate() - i)
-    const fechaStr = d.toISOString().split('T')[0]
+    const fechaStr = d.toISOString().split('T')[0] || ''
 
     const estadoDia = estado.dias.get(fechaStr)
     if (estadoDia?.registro_diario?.[variable] !== undefined) {
@@ -79,7 +78,7 @@ export function calcularTendenciasSemanal(
   for (let i = 0; i < 28; i++) {
     const d = new Date(fechaTarget)
     d.setDate(d.getDate() - i)
-    const fechaStr = d.toISOString().split('T')[0]
+    const fechaStr = d.toISOString().split('T')[0] || ''
     const estadoDia = estado.dias.get(fechaStr)
     if (estadoDia?.registro_diario?.[variable] !== undefined) {
       datosDisponibles++

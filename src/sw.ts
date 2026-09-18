@@ -1,9 +1,14 @@
 /// <reference lib="webworker" />
+// @ts-ignore
 import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching'
+// @ts-ignore
 import { registerRoute } from 'workbox-routing'
+// @ts-ignore
 import { NetworkOnly } from 'workbox-strategies'
 
-declare const self: ServiceWorkerGlobalScope
+declare const self: ServiceWorkerGlobalScope & {
+  __WB_MANIFEST?: Array<{ url: string; revision: string }>
+}
 
 // Precache assets
 cleanupOutdatedCaches()
@@ -15,24 +20,24 @@ precacheAndRoute(self.__WB_MANIFEST || [])
 // Esta es una red de seguridad: si por algún motivo se intenta llamar a /api/*,
 // solo funciona si hay red, nunca devolvemos cached falso.
 registerRoute(
-  ({ url }) => url.pathname.startsWith('/api/'),
+  ({ url }: { url: URL }) => url.pathname.startsWith('/api/'),
   new NetworkOnly(),
 )
 
 // Handle install
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (_event: ExtendableEvent) => {
   console.log('[SW] Installing...')
   self.skipWaiting()
 })
 
 // Handle activate
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', (event: ExtendableEvent) => {
   console.log('[SW] Activating...')
   event.waitUntil(self.clients.claim())
 })
 
 // Handle fetch - precache-first
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (event: FetchEvent) => {
   // Solo GET requests
   if (event.request.method !== 'GET') {
     return

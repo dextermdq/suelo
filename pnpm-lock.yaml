@@ -52,6 +52,9 @@ devDependencies:
   eslint-plugin-react:
     specifier: ^7.33.0
     version: 7.37.5(eslint@8.57.1)
+  fake-indexeddb:
+    specifier: ^6.2.5
+    version: 6.2.5
   fast-check:
     specifier: ^3.14.0
     version: 3.23.2
@@ -73,6 +76,15 @@ devDependencies:
   vitest:
     specifier: ^1.0.0
     version: 1.6.1(@types/node@20.19.43)(@vitest/ui@1.6.1)
+  workbox-precaching:
+    specifier: ^7.4.1
+    version: 7.4.1
+  workbox-routing:
+    specifier: ^7.4.1
+    version: 7.4.1
+  workbox-strategies:
+    specifier: ^7.4.1
+    version: 7.4.1
 
 packages:
 
@@ -3219,6 +3231,11 @@ packages:
       onetime: 6.0.0
       signal-exit: 4.1.0
       strip-final-newline: 3.0.0
+    dev: true
+
+  /fake-indexeddb@6.2.5:
+    resolution: {integrity: sha512-CGnyrvbhPlWYMngksqrSSUT1BAVP49dZocrHuK0SvtR0D5TMs5wP0o3j7jexDJW01KSadjBp1M/71o/KR3nD1w==}
+    engines: {node: '>=18'}
     dev: true
 
   /fast-check@3.23.2:

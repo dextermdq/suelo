@@ -41,7 +41,7 @@ export class IdbRepo implements Repo {
       }
     } catch (error) {
       if (error instanceof z.ZodError) {
-        throw new Error(`Evento inválido: ${error.errors[0].message}`)
+        throw new Error(`Evento inválido: ${error.errors[0]?.message || 'Error desconocido'}`)
       }
       if ((error as any).name === 'QuotaExceededError') {
         throw new Error(
@@ -101,7 +101,7 @@ export class IdbRepo implements Repo {
       const validacion = schema.safeParse(json)
       if (!validacion.success) {
         throw new Error(
-          `Importación inválida: ${validacion.error.errors[0].message}`,
+          `Importación inválida: ${validacion.error.errors[0]?.message || 'Error desconocido'}`,
         )
       }
 

@@ -7,11 +7,12 @@
  * en el día siguiente.
  */
 
-const ZONA_HORARIA = 'America/Argentina/Buenos_Aires'
-
 /** Convierte una fecha ISO (YYYY-MM-DD) a un Date en UTC */
 export function fechaADate(fecha: string): Date {
-  const [year, month, day] = fecha.split('-').map(Number)
+  const parts = fecha.split('-')
+  const year = parseInt(parts[0]!, 10)
+  const month = parseInt(parts[1]!, 10)
+  const day = parseInt(parts[2]!, 10)
   // Crear en UTC
   return new Date(Date.UTC(year, month - 1, day))
 }
@@ -35,7 +36,6 @@ export function hoyArt(): string {
  */
 export function numeroSemanaISO(fecha: string): number {
   const date = fechaADate(fecha)
-  const year = date.getUTCFullYear()
 
   // Obtener el jueves de la semana (día 4)
   const thursdayOfWeek = new Date(date)
@@ -68,7 +68,6 @@ export function anoSemanaISO(fecha: string): number {
 
 /** Obtiene el lunes de una semana ISO (fecha: YYYY-MM-DD) */
 export function lunesDelaSemana(fecha: string): string {
-  const date = fechaADate(fecha)
   const year = anoSemanaISO(fecha)
 
   // Enero 4 siempre está en semana 1

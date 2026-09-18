@@ -59,7 +59,7 @@ export class FakeRepo implements Repo {
     const validacion = schema.safeParse(json)
     if (!validacion.success) {
       throw new Error(
-        `Importación inválida: ${validacion.error.errors[0].message}`,
+        `Importación inválida: ${validacion.error.errors[0]?.message || 'Error desconocido'}`,
       )
     }
 
