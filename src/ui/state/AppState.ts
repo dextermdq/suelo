@@ -8,7 +8,7 @@ export interface AppState {
   faseActual: number
 
   // UI
-  pantallaActual: 'inicio' | 'rutina' | 'guia' | 'bitacora'
+  pantallaActual: 'inicio' | 'rutina' | 'detalle' | 'guia' | 'bitacora'
   ejercicioSeleccionado: string | null
 
   // Persistencia
@@ -20,7 +20,7 @@ export interface AppState {
 export type AppAction =
   | { type: 'SET_PROGRAMA'; payload: Programa }
   | { type: 'SET_ESTADO'; payload: EstadoDerivado }
-  | { type: 'CAMBIAR_PANTALLA'; payload: 'inicio' | 'rutina' | 'guia' | 'bitacora' }
+  | { type: 'CAMBIAR_PANTALLA'; payload: 'inicio' | 'rutina' | 'detalle' | 'guia' | 'bitacora' }
   | { type: 'SELECCIONAR_EJERCICIO'; payload: string }
   | { type: 'SET_CARGANDO'; payload: boolean }
   | { type: 'SET_ERROR'; payload: string | null }

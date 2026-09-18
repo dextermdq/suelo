@@ -3,6 +3,7 @@ import { useReducer, useEffect } from 'react';
 import { appReducer, initialState } from './ui/state/AppState';
 import { PantallaInicio } from './ui/screens/PantallaInicio';
 import { PantallaRutina } from './ui/screens/PantallaRutina';
+import { PantallaDetalle } from './ui/screens/PantallaDetalle';
 import { PantallaGuia } from './ui/screens/PantallaGuia';
 import { PantallabitÁcora } from './ui/screens/PantallabitÁcora';
 import { validarPrograma } from '@config/esquema';
@@ -55,5 +56,5 @@ export const App = () => {
     if (state.error) {
         return (_jsxs("div", { style: { padding: '2rem', color: 'red' }, children: [_jsx("h2", { children: "Error" }), _jsx("p", { children: state.error })] }));
     }
-    return (_jsxs("div", { children: [state.pantallaActual === 'inicio' && (_jsx(PantallaInicio, { state: state, dispatch: dispatch })), state.pantallaActual === 'rutina' && (_jsx(PantallaRutina, { state: state, dispatch: dispatch })), state.pantallaActual === 'guia' && (_jsx(PantallaGuia, { state: state, dispatch: dispatch })), state.pantallaActual === 'bitacora' && (_jsx(PantallabitÁcora, { state: state, dispatch: dispatch }))] }));
+    return (_jsxs("div", { children: [state.pantallaActual === 'inicio' && (_jsx(PantallaInicio, { state: state, dispatch: dispatch })), state.pantallaActual === 'rutina' && (_jsx(PantallaRutina, { state: state, dispatch: dispatch })), state.pantallaActual === 'detalle' && (_jsx(PantallaDetalle, { state: state, dispatch: dispatch })), state.pantallaActual === 'guia' && (_jsx(PantallaGuia, { state: state, dispatch: dispatch })), state.pantallaActual === 'bitacora' && (_jsx(PantallabitÁcora, { state: state, dispatch: dispatch }))] }));
 };

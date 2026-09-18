@@ -2,6 +2,7 @@ import React, { useReducer, useEffect } from 'react'
 import { appReducer, initialState } from './ui/state/AppState'
 import { PantallaInicio } from './ui/screens/PantallaInicio'
 import { PantallaRutina } from './ui/screens/PantallaRutina'
+import { PantallaDetalle } from './ui/screens/PantallaDetalle'
 import { PantallaGuia } from './ui/screens/PantallaGuia'
 import { PantallabitÁcora } from './ui/screens/PantallabitÁcora'
 import { validarPrograma } from '@config/esquema'
@@ -77,6 +78,9 @@ export const App: React.FC = () => {
       )}
       {state.pantallaActual === 'rutina' && (
         <PantallaRutina state={state} dispatch={dispatch} />
+      )}
+      {state.pantallaActual === 'detalle' && (
+        <PantallaDetalle state={state} dispatch={dispatch} />
       )}
       {state.pantallaActual === 'guia' && (
         <PantallaGuia state={state} dispatch={dispatch} />

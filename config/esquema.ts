@@ -46,6 +46,9 @@ const ejercicioSchema = z.object({
   vigencia_desde: isoDateString,
   vigencia_hasta: isoDateString.nullable(),
   activo: z.boolean(),
+  instrucciones: z.string().optional(),
+  senales_correctas: z.array(z.string()).optional(),
+  senales_error: z.array(z.string()).optional(),
 })
 
 const criterioSchema = z.object({

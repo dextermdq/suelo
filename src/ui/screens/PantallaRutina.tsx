@@ -57,7 +57,7 @@ export const PantallaRutina: React.FC<PantallaRutinaProps> = ({
             }`}
             onClick={() => {
               dispatch({ type: 'SELECCIONAR_EJERCICIO', payload: ej.id })
-              dispatch({ type: 'CAMBIAR_PANTALLA', payload: 'guia' })
+              dispatch({ type: 'CAMBIAR_PANTALLA', payload: 'detalle' })
             }}
           >
             <div className={styles.ejercicioTitle}>
