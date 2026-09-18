@@ -1,0 +1,44 @@
+# ── Datos personales de salud — NUNCA versionar ──────────────────────
+docs/perfil.md
+docs/perfil.*.md
+**/*.local.*
+**/*.privado.*
+exports/
+respaldos/
+capturas/
+*.csv
+*.tsv
+
+# ── Entorno ───────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Build y dependencias ──────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+build/
+.pnpm-store/
+*.tsbuildinfo
+
+# ── PWA generado ──────────────────────────────────────────────────────
+dev-dist/
+public/sw.js
+public/workbox-*.js
+public/registerSW.js
+
+# ── Tests y coverage ──────────────────────────────────────────────────
+coverage/
+.vitest/
+
+# ── Editor y sistema ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+
+# ── Agentes ───────────────────────────────────────────────────────────
+.antigravity/
+.claude/settings.local.json

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Style Tile · Sistema de Diseño</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'bg-base': '#0F172A',
+            'bg-surface': '#1E293B',
+            'bg-surface-alt': '#293548',
+            'border-subtle': '#334155',
+            'text-primary': '#F1F5F9',
+            'text-secondary': '#94A3B8',
+            'accent': '#06B6D4',
+            'success': '#22C55E',
+            'warning': '#F59E0B',
+            'danger': '#EF4444',
+            'disabled': '#475569',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0F172A;
+      color: #F1F5F9;
+      font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    * {
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#0F172A] text-[#F1F5F9] pb-24 antialiased">
+  <div class="max-w-[390px] mx-auto p-4 space-y-6">
+
+    <!-- Header Specimen -->
+    <header class="pt-2 pb-1 border-b border-[#334155]">
+      <div class="inline-flex items-center px-3 py-1 rounded-full bg-[#293548] text-[#06B6D4] text-[14px] font-medium mb-2">
+        Fase 1 · Semana 3
+      </div>
+      <h1 class="text-[28px] font-bold leading-tight text-[#F1F5F9] tracking-tight">Style Tile</h1>
+      <p class="text-[14px] text-[#94A3B8] mt-1">Tokens y especímenes de referencia (390×844)</p>
+    </header>
+
+    <!-- PALETA DE COLOR -->
+    <section class="space-y-3">
+      <h2 class="text-[20px] font-semibold text-[#F1F5F9]">Colores</h2>
+      <div class="grid grid-cols-2 gap-2 text-[14px]">
+        <div class="p-3 rounded-[8px] bg-[#0F172A] border border-[#334155] flex flex-col justify-between h-20">
+          <span class="font-medium text-[#F1F5F9]">bg/base</span>
+          <span class="text-[#94A3B8] text-xs font-mono">#0F172A</span>
+        </div>
+        <div class="p-3 rounded-[8px] bg-[#1E293B] border border-[#334155] flex flex-col justify-between h-20">
+          <span class="font-medium text-[#F1F5F9]">bg/surface</span>
+          <span class="text-[#94A3B8] text-xs font-mono">#1E293B</span>
+        </div>
+        <div class="p-3 rounded-[8px] bg-[#293548] border border-[#334155] flex flex-col justify-between h-20">
+          <span class="font-medium text-[#F1F5F9]">bg/surface-alt</span>
+          <span class="text-[#94A3B8] text-xs font-mono">#293548</span>
+        </div>
+        <div class="p-3 rounded-[8px] bg-[#1E293B] border border-[#334155] flex flex-col justify-between h-20">
+          <span class="font-medium text-[#F1F5F9]">border</span>
+          <span class="text-[#94A3B8] text-xs font-mono">#334155</span>
+        </div>
+        <div class="p-3 rounded-[8px] bg-[#1E293B] border border-[#334155] flex flex-col justify-between h-20">
+          <span class="font-medium text-[#06B6D4]">accent</span>
+          <span class="text-[#06B6D4] text-xs font-mono">#06B6D4</span>
+        </div>
+        <div class="p-3 rounded-[8px] bg-[#1E293B] border border-[#334155] flex flex-col justify-between h-20">
+          <span class="font-medium text-[#22C55E]">success</span>
+          <span class="text-[#22C55E] text-xs font-mono">#22C55E</span>
+        </div>
+        <div class="p-3 rounded-[8px] bg-[#1E293B] border border-[#334155] flex flex-col justify-between h-20">
+          <span class="font-medium text-[#F59E0B]">warning</span>
+          <span class="text-[#F59E0B] text-xs font-mono">#F59E0B</span>
+        </div>
+        <div class="p-3 rounded-[8px] bg-[#1E293B] border border-[#334155] flex flex-col justify-between h-20">
+          <span class="font-medium text-[#EF4444]">danger</span>
+          <span class="text-[#EF4444] text-xs font-mono">#EF4444</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCALA TIPOGRÁFICA -->
+    <section class="space-y-3">
+      <h2 class="text-[20px] font-semibold text-[#F1F5F9]">Tipografía (Inter)</h2>
+      <div class="p-4 rounded-[12px] bg-[#1E293B] border border-[#334155] space-y-4">
+        <div>
+          <span class="text-xs text-[#94A3B8] uppercase tracking-wider block mb-1">28/700 · Título</span>
+          <p class="text-[28px] font-bold leading-tight text-[#F1F5F9]">Buenas noches</p>
+        </div>
+        <div class="pt-2 border-t border-[#334155]">
+          <span class="text-xs text-[#94A3B8] uppercase tracking-wider block mb-1">20/600 · Sección</span>
+          <p class="text-[20px] font-semibold leading-snug text-[#F1F5F9]">Respiración y suelo pélvico</p>
+        </div>
+        <div class="pt-2 border-t border-[#334155]">
+          <span class="text-xs text-[#94A3B8] uppercase tracking-wider block mb-1">17/500 · Título tarjeta</span>
+          <p class="text-[17px] font-medium leading-normal text-[#F1F5F9]">Kegel inverso · Concepto paracaídas</p>
+        </div>
+        <div class="pt-2 border-t border-[#334155]">
+          <span class="text-xs text-[#94A3B8] uppercase tracking-wider block mb-1">16/400 · Cuerpo</span>
+          <p class="text-[16px] font-normal leading-relaxed text-[#F1F5F9]">Marcá solo lo que completes hoy. No hay nada que recuperar ni perder.</p>
+        </div>
+        <div class="pt-2 border-t border-[#334155]">
+          <span class="text-xs text-[#94A3B8] uppercase tracking-wider block mb-1">14/400 · Caption (Límite mínimo)</span>
+          <p class="text-[14px] font-normal text-[#94A3B8]">3 series · 6 reps · 10 s de soltar · 4 min</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTONES -->
+    <section class="space-y-3">
+      <h2 class="text-[20px] font-semibold text-[#F1F5F9]">Estados de botón (Min 48px)</h2>
+      <div class="space-y-2.5">
+        <button class="w-full min-h-[48px] px-4 py-3 rounded-[8px] bg-[#06B6D4] text-[#0F172A] font-semibold text-[16px] flex items-center justify-center transition-colors">
+          Botón primario (accent)
+        </button>
+        <button class="w-full min-h-[48px] px-4 py-3 rounded-[8px] bg-[#1E293B] border border-[#334155] text-[#F1F5F9] font-medium text-[16px] flex items-center justify-center">
+          Botón secundario
+        </button>
+        <button class="w-full min-h-[48px] px-4 py-3 rounded-[8px] bg-transparent text-[#06B6D4] font-medium text-[16px] flex items-center justify-center">
+          Botón fantasma (ghost)
+        </button>
+        <button disabled class="w-full min-h-[48px] px-4 py-3 rounded-[8px] bg-[#1E293B] border border-[#334155] text-[#475569] font-medium text-[16px] flex items-center justify-center cursor-not-allowed">
+          Botón deshabilitado
+        </button>
+      </div>
+    </section>
+
+    <!-- CHECKBOXES ACCESIBLES -->
+    <section class="space-y-3">
+      <h2 class="text-[20px] font-semibold text-[#F1F5F9]">Checkboxes (Regla: color + tilde)</h2>
+      <div class="space-y-2">
+        <!-- Unchecked -->
+        <div class="p-3 rounded-[12px] bg-[#1E293B] border border-[#334155] flex items-center justify-between min-h-[56px]">
+          <div>
+            <span class="text-[17px] font-medium text-[#F1F5F9] block">Malasana</span>
+            <span class="text-[14px] text-[#94A3B8]">Sin completar · Estado sin marcar</span>
+          </div>
+          <div class="w-12 h-12 flex items-center justify-center">
+            <div class="w-7 h-7 rounded-[8px] border-2 border-[#334155] bg-transparent"></div>
+          </div>
+        </div>
+        <!-- Checked (con relleno verde + tilde) -->
+        <div class="p-3 rounded-[12px] bg-[#1E293B] border border-[#22C55E] flex items-center justify-between min-h-[56px]">
+          <div>
+            <span class="text-[17px] font-medium text-[#F1F5F9] block">Respiración diafragmática</span>
+            <span class="text-[14px] text-[#22C55E] flex items-center gap-1">
+              <span>✓</span> Completado con éxito
+            </span>
+          </div>
+          <div class="w-12 h-12 flex items-center justify-center">
+            <div class="w-7 h-7 rounded-[8px] bg-[#22C55E] text-[#0F172A] flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANILLOS Y BARRAS DE PROGRESO -->
+    <section class="space-y-3">
+      <h2 class="text-[20px] font-semibold text-[#F1F5F9]">Progreso</h2>
+      <div class="p-4 rounded-[12px] bg-[#1E293B] border border-[#334155] space-y-6">
+        <!-- Progress Ring 68% -->
+        <div class="flex items-center gap-4">
+          <div class="relative w-20 h-20 flex-shrink-0 flex items-center justify-center">
+            <svg class="w-20 h-20 -rotate-90" viewBox="0 0 72 72">
+              <circle cx="36" cy="36" r="30" stroke="#293548" stroke-width="6" fill="none"></circle>
+              <!-- Circunferencia: 2 * PI * 30 ≈ 188.5 | 68% de 188.5 = 128.2 -->
+              <circle cx="36" cy="36" r="30" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" fill="none"
+                      stroke-dasharray="188.5" stroke-dashoffset="60.3"></circle>
+            </svg>
+            <span class="absolute text-[17px] font-bold text-[#F1F5F9]">68%</span>
+          </div>
+          <div>
+            <span class="text-[17px] font-medium text-[#F1F5F9] block">Anillo de progreso (68%)</span>
+            <span class="text-[14px] text-[#94A3B8]">Adherencia semanal sin gamificación</span>
+          </div>
+        </div>
+
+        <!-- Horizontal Bar 40% -->
+        <div class="space-y-1.5 pt-2 border-t border-[#334155]">
+          <div class="flex justify-between text-[14px]">
+            <span class="text-[#F1F5F9] font-medium">Barra horizontal</span>
+            <span class="text-[#94A3B8]">40%</span>
+          </div>
+          <div class="w-full h-2 rounded-full bg-[#293548] overflow-hidden">
+            <div class="h-full bg-[#06B6D4] rounded-full" style="width: 40%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARJETAS Y BORDES (SIN SOMBRAS) -->
+    <section class="space-y-3">
+      <h2 class="text-[20px] font-semibold text-[#F1F5F9]">Tarjetas (Radius 12 · Sin sombras)</h2>
+      <div class="p-4 rounded-[12px] bg-[#1E293B] border border-[#334155] space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-[17px] font-medium text-[#F1F5F9]">Tarjeta base (bg/surface)</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-[#293548] text-[#06B6D4] text-[14px] font-medium">mín</span>
+        </div>
+        <p class="text-[14px] text-[#94A3B8]">
+          Separación visual lograda puramente mediante el token <code class="text-[#06B6D4]">border: #334155</code>. Cero sombras decorativas para preservar contraste nocturno.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-[12px] bg-[#293548] border border-[#334155] space-y-1">
+        <span class="text-[17px] font-medium text-[#F1F5F9] block">Banner / Surface-alt</span>
+        <p class="text-[14px] text-[#94A3B8]">
+          ¿Te salteaste ayer? No importa. Marcá solo lo de hoy — acá no se acumula nada.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- TAB BAR INFERIOR (4 ítems exactos, 48px touch, Inicio activo) -->
+  <nav class="fixed bottom-0 left-0 right-0 max-w-[390px] mx-auto h-[68px] bg-[#1E293B] border-t border-[#334155] px-2 flex items-center justify-around z-50">
+    <!-- Inicio (Activo) -->
+    <a href="#" class="flex flex-col items-center justify-center w-16 h-12 text-[#06B6D4]">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+      </svg>
+      <span class="text-[14px] font-medium leading-none">Inicio</span>
+    </a>
+    <!-- Rutina -->
+    <a href="#" class="flex flex-col items-center justify-center w-16 h-12 text-[#94A3B8]">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+      </svg>
+      <span class="text-[14px] font-normal leading-none">Rutina</span>
+    </a>
+    <!-- Guía -->
+    <a href="#" class="flex flex-col items-center justify-center w-16 h-12 text-[#94A3B8]">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+      </svg>
+      <span class="text-[14px] font-normal leading-none">Guía</span>
+    </a>
+    <!-- Bitácora -->
+    <a href="#" class="flex flex-col items-center justify-center w-16 h-12 text-[#94A3B8]">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      <span class="text-[14px] font-normal leading-none">Bitácora</span>
+    </a>
+  </nav>
+</body>
+</html>
