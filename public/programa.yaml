@@ -1,0 +1,310 @@
+version: "1.0"
+
+# ─── FASES ───────────────────────────────────────────────────────
+
+fases:
+  - numero: 1
+    nombre: "Down-training (semanas 1-4)"
+    semanas: 4
+    objetivo: "Desensibilización del suelo pélvico hipertónico mediante relajación y movilidad"
+    ejercicios:
+      - id: breathing_diaphragmatic
+        dosis_minima: true
+      - id: stretch_adductors_lunge
+        dosis_minima: true
+      - id: mobility_hip_circles
+        dosis_minima: true
+      - id: mobility_cat_cow
+        dosis_minima: true
+    criterios_pasaje:
+      - tipo: adherencia_minima
+        valor: 75
+      - tipo: tension_basal_max
+        valor: 6
+      - tipo: registros_con_tension_baja
+        valor: 3
+      - tipo: sin_empeoramiento_sintomas
+        valor: null
+
+  - numero: 2
+    nombre: "Transición (semanas 5-8)"
+    semanas: 4
+    objetivo: "Consolidar relajación e introducir relajación profunda"
+    ejercicios:
+      - id: breathing_diaphragmatic
+        dosis_minima: true
+      - id: stretch_adductors_lunge
+        dosis_minima: true
+      - id: mobility_hip_circles
+        dosis_minima: true
+      - id: mobility_cat_cow
+        dosis_minima: true
+      - id: breathing_478
+        dosis_minima: false
+    criterios_pasaje:
+      - tipo: adherencia_minima
+        valor: 75
+      - tipo: tension_basal_max
+        valor: 5
+      - tipo: registros_con_tension_baja
+        valor: 5
+      - tipo: sin_empeoramiento_sintomas
+        valor: null
+
+  - numero: 3
+    nombre: "Up-training (semanas 9-12)"
+    semanas: 4
+    objetivo: "Fortalecimiento del suelo pélvico (solo si hipertonía resuelta)"
+    ejercicios:
+      - id: breathing_diaphragmatic
+        dosis_minima: false
+      - id: mobility_hip_circles
+        dosis_minima: false
+      - id: mobility_cat_cow
+        dosis_minima: false
+      - id: kegel_fast
+        dosis_minima: false
+      - id: kegel_sustained
+        dosis_minima: false
+    criterios_pasaje:
+      - tipo: adherencia_minima
+        valor: 75
+
+# ─── EJERCICIOS ──────────────────────────────────────────────────
+
+ejercicios:
+  # ─ DOWN-TRAINING (Relajación)
+  - id: breathing_diaphragmatic
+    nombre: "Respiración diafragmática"
+    pilar: down-training
+    dosis:
+      series: 1
+      ciclos: 10
+      seg_inhalacion: 4
+      seg_exhalacion: 6
+    minutos_estimados: 3
+    dosis_minima: true
+    nivel_evidencia: consenso_clinico
+    vigencia_desde: "2026-09-18"
+    vigencia_hasta: null
+    activo: true
+    instrucciones: |
+      Posición: sentado o acostado, espalda recta.
+      Ciclo (10 repeticiones):
+      1. Inhalación nasal lenta (4 segundos) — el suelo pélvico desciende
+      2. Pausa (2 segundos)
+      3. Exhalación bucal lenta (6 segundos)
+    senales_correctas:
+      - El abdomen baja (no se hincha) en la inhalación
+      - La respiración es silenciosa y sin tensión
+      - Sientes relajación en el suelo pélvico
+    senales_error:
+      - Los hombros suben (estás usando el pecho, no el diafragma)
+      - La inhalación es rápida o superficial
+      - Tensión en cuello o mandíbula
+
+  - id: stretch_adductors_lunge
+    nombre: "Estiramiento de aductores en estocada"
+    pilar: down-training
+    dosis:
+      series: 2
+      seg_inhalacion: 30
+      descanso_entre_series: 15
+    minutos_estimados: 2
+    dosis_minima: true
+    nivel_evidencia: consenso_clinico
+    vigencia_desde: "2026-09-18"
+    vigencia_hasta: null
+    activo: true
+    instrucciones: |
+      Posición de estocada baja: una pierna adelante (rodilla doblada 90°), la otra atrás (talón levantado).
+      Mantén 30 segundos sin forzar. El suelo pélvico baja por el estiramiento.
+      Descansa 15 segundos.
+      Repite 2 series (puedes alternar piernas o hacer ambas del mismo lado).
+    senales_correctas:
+      - Sientes el estiramiento en la cara interna del muslo (aductores)
+      - La pelvis se relaja (baja el suelo pélvico)
+      - Respiración profunda y sin tensión
+    senales_error:
+      - Rodilla delantera pasa la punta del pie (riesgo de lesión)
+      - Torso inclinado hacia adelante
+      - Contracción en lugar de relajación
+
+  - id: breathing_478
+    nombre: "Respiración 4-7-8"
+    pilar: down-training
+    dosis:
+      series: 1
+      ciclos: 5
+      seg_inhalacion: 4
+      seg_contraccion: 7
+      seg_exhalacion: 8
+    minutos_estimados: 5
+    dosis_minima: false
+    nivel_evidencia: moderado
+    vigencia_desde: "2026-09-18"
+    vigencia_hasta: null
+    activo: true
+    instrucciones: |
+      Posición: sentado cómodo, espalda recta, ojos cerrados.
+      Ciclo (5 repeticiones):
+      1. Inhalación nasal (4 segundos)
+      2. Retención (7 segundos) — el suelo pélvico desciende pero se estabiliza
+      3. Exhalación bucal lenta (8 segundos)
+      Este ejercicio induce un estado profundo de relajación.
+    senales_correctas:
+      - La retención de 7 segundos es cómoda (no fuerces)
+      - Sientes relajación profunda después
+      - El suelo pélvico desciende sin contracción
+    senales_error:
+      - Pánico o aceleración del ritmo cardíaco
+      - Contracción voluntaria del suelo pélvico
+      - Mareos (reducí el número de ciclos a 3-4)
+
+  # ─ MOVILIDAD
+  - id: mobility_hip_circles
+    nombre: "Movilidad de cadera — círculos"
+    pilar: movilidad
+    dosis:
+      series: 1
+      repeticiones: 10
+    minutos_estimados: 2
+    dosis_minima: true
+    nivel_evidencia: consenso_clinico
+    vigencia_desde: "2026-09-18"
+    vigencia_hasta: null
+    activo: true
+    instrucciones: |
+      Posición: de pie, manos en cintura, pies separados ancho de caderas.
+      Haz 10 círculos amplios con las caderas en sentido horario.
+      Luego 10 círculos en sentido antihorario.
+      Movimiento lento y controlado; respira profundo.
+    senales_correctas:
+      - Las caderas trazan un círculo completo y amplio
+      - El suelo pélvico se relaja (desciende) en la parte trasera del círculo
+      - Respiración profunda y sin tensión
+    senales_error:
+      - Movimiento pequeño o tenso
+      - Contracción de glúteos o abdomen
+      - Rigidez en la pelvis
+
+  - id: mobility_cat_cow
+    nombre: "Gato-vaca"
+    pilar: movilidad
+    dosis:
+      series: 1
+      repeticiones: 10
+    minutos_estimados: 2
+    dosis_minima: true
+    nivel_evidencia: consenso_clinico
+    vigencia_desde: "2026-09-18"
+    vigencia_hasta: null
+    activo: true
+    instrucciones: |
+      Posición: a cuatro puntos (manos bajo hombros, rodillas bajo caderas).
+      Ciclo (10 repeticiones):
+      1. VACA: inhalación, baja el pecho y levanta la cabeza suavemente, el suelo pélvico desciende
+      2. GATO: exhalación, redondea la columna, mete la cabeza, contrae abdomen suavemente
+      Movimiento fluido y sincronizado con la respiración.
+    senales_correctas:
+      - La columna se mueve como una onda
+      - La respiración sincroniza con el movimiento
+      - El suelo pélvico desciende en la inhalación (vaca)
+    senales_error:
+      - Movimiento rígido o por tramos
+      - Cabeza caída (mira al frente)
+      - Desincronización con la respiración
+
+  # ─ UP-TRAINING (Fuerza) — BLOQUEADOS EN HIPERTÓNICO
+  - id: kegel_fast
+    nombre: "Kegel de fuerza — rápidos"
+    pilar: up-training
+    dosis:
+      series: 2
+      repeticiones: 10
+      seg_contraccion: 1
+      seg_relajacion: 1
+      descanso_entre_series: 20
+    minutos_estimados: 3
+    dosis_minima: false
+    nivel_evidencia: alto
+    habilitacion_condicion:
+      tipo: escenario_funcional
+      valor_excluido: hipertonico
+    vigencia_desde: "2026-09-18"
+    vigencia_hasta: null
+    activo: true
+    instrucciones: |
+      ⚠️ SOLO FASE 3 — Solo si la tensión basal es ≤5
+      Contracción máxima rápida del suelo pélvico.
+      Ciclo (10 repeticiones):
+      1. Contracción máxima rápida (1 segundo)
+      2. Relajación completa (1 segundo)
+      Series: 2 • Descanso entre series: 20 segundos
+      Posición: sentado o acostado cómodo.
+    senales_correctas:
+      - Contracción clara y máxima (como frenar un chorro de orina)
+      - Relajación completa entre cada una
+      - Sin tensión en abdomen, glúteos o muslos
+    senales_error:
+      - Contracción débil o incompleta
+      - Retención de más de 1 segundo
+      - Tensión en abdomen o glúteos
+      - Dolor (detén inmediatamente)
+
+  - id: kegel_sustained
+    nombre: "Kegel de fuerza — sostenidos"
+    pilar: up-training
+    dosis:
+      series: 2
+      seg_contraccion: 5
+      seg_relajacion: 10
+      descanso_entre_series: 30
+    minutos_estimados: 4
+    dosis_minima: false
+    nivel_evidencia: alto
+    habilitacion_condicion:
+      tipo: escenario_funcional
+      valor_excluido: hipertonico
+    vigencia_desde: "2026-09-18"
+    vigencia_hasta: null
+    activo: true
+    instrucciones: |
+      ⚠️ SOLO FASE 3 — Solo si la tensión basal es ≤5
+      Contracción máxima sostenida del suelo pélvico.
+      Semana 1-4: contracción 5 seg / relajación 10 seg
+      Aumenta 1 segundo/semana (hasta 10 seg máximo)
+      Series: 2 • Descanso entre series: 30 segundos
+      Posición: sentado o acostado cómodo.
+    senales_correctas:
+      - Contracción máxima pero sostenible sin temblor
+      - Relajación profunda (el doble de la contracción)
+      - Sin tensión en abdomen, glúteos o muslos
+      - Recuperación gradual semana a semana
+    senales_error:
+      - Contracción débil o con temblor
+      - Relajación insuficiente (menos del doble)
+      - Tensión en abdomen o glúteos
+      - Fatiga excesiva (reduce las series)
+      - Dolor (detén inmediatamente)
+
+# ─── REGISTRO DIARIO ─────────────────────────────────────────────
+
+registro_diario:
+  - variable: tension_basal
+    escala_minima: 0
+    escala_maxima: 10
+    obligatorio: true
+    descripcion: "Tensión de reposo del suelo pélvico (0=relajado, 10=máxima contracción)"
+
+  - variable: control
+    escala_minima: 0
+    escala_maxima: 10
+    obligatorio: false
+    descripcion: "Sensación de control consciente (0=no siento, 10=máximo control)"
+
+  - variable: sintomas
+    escala_minima: 0
+    escala_maxima: 10
+    obligatorio: false
+    descripcion: "Presencia de síntomas (0=ausente, 10=severo e incapacitante)"
