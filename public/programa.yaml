@@ -6,7 +6,7 @@ fases:
   - numero: 1
     nombre: "Down-training (semanas 1-4)"
     semanas: 4
-    objetivo: "Desensibilización del suelo pélvico hipertónico mediante relajación y movilidad"
+    objetivo: "Desensibilizacion del suelo pelvico hipertonico mediante relajacion y movilidad"
     ejercicios:
       - id: breathing_diaphragmatic
         dosis_minima: true
@@ -27,9 +27,9 @@ fases:
         valor: null
 
   - numero: 2
-    nombre: "Transición (semanas 5-8)"
+    nombre: "Transicion (semanas 5-8)"
     semanas: 4
-    objetivo: "Consolidar relajación e introducir relajación profunda"
+    objetivo: "Consolidar relajacion e introducir relajacion profunda"
     ejercicios:
       - id: breathing_diaphragmatic
         dosis_minima: true
@@ -54,7 +54,7 @@ fases:
   - numero: 3
     nombre: "Up-training (semanas 9-12)"
     semanas: 4
-    objetivo: "Fortalecimiento del suelo pélvico (solo si hipertonía resuelta)"
+    objetivo: "Fortalecimiento del suelo pelvico (solo si hipertonia resuelta)"
     ejercicios:
       - id: breathing_diaphragmatic
         dosis_minima: false
@@ -73,9 +73,9 @@ fases:
 # ─── EJERCICIOS ──────────────────────────────────────────────────
 
 ejercicios:
-  # ─ DOWN-TRAINING (Relajación)
+  # ─ DOWN-TRAINING (Relajacion)
   - id: breathing_diaphragmatic
-    nombre: "Respiración diafragmática"
+    nombre: "Respiracion diafragmatica"
     pilar: down-training
     dosis:
       series: 1
@@ -89,19 +89,19 @@ ejercicios:
     vigencia_hasta: null
     activo: true
     instrucciones: |
-      Posición: sentado o acostado, espalda recta.
+      Posicion: sentado o acostado, espalda recta.
       Ciclo (10 repeticiones):
-      1. Inhalación nasal lenta (4 segundos) — el suelo pélvico desciende
+      1. Inhalacion nasal lenta (4 segundos) — el suelo pelvico desciende
       2. Pausa (2 segundos)
-      3. Exhalación bucal lenta (6 segundos)
+      3. Exhalacion bucal lenta (6 segundos)
     senales_correctas:
-      - El abdomen baja (no se hincha) en la inhalación
-      - La respiración es silenciosa y sin tensión
-      - Sientes relajación en el suelo pélvico
+      - El abdomen baja (no se hincha) en la inhalacion
+      - La respiracion es silenciosa y sin tension
+      - Sientes relajacion en el suelo pelvico
     senales_error:
-      - Los hombros suben (estás usando el pecho, no el diafragma)
-      - La inhalación es rápida o superficial
-      - Tensión en cuello o mandíbula
+      - Los hombros suben (estas usando el pecho, no el diafragma)
+      - La inhalacion es rapida o superficial
+      - Tension en cuello o mandibula
 
   - id: stretch_adductors_lunge
     nombre: "Estiramiento de aductores en estocada"
@@ -117,21 +117,21 @@ ejercicios:
     vigencia_hasta: null
     activo: true
     instrucciones: |
-      Posición de estocada baja: una pierna adelante (rodilla doblada 90°), la otra atrás (talón levantado).
-      Mantén 30 segundos sin forzar. El suelo pélvico baja por el estiramiento.
+      Posicion de estocada baja: una pierna adelante (rodilla doblada 90°), la otra atras (talon levantado).
+      Manten 30 segundos sin forzar. El suelo pelvico baja por el estiramiento.
       Descansa 15 segundos.
       Repite 2 series (puedes alternar piernas o hacer ambas del mismo lado).
     senales_correctas:
       - Sientes el estiramiento en la cara interna del muslo (aductores)
-      - La pelvis se relaja (baja el suelo pélvico)
-      - Respiración profunda y sin tensión
+      - La pelvis se relaja (baja el suelo pelvico)
+      - Respiracion profunda y sin tension
     senales_error:
-      - Rodilla delantera pasa la punta del pie (riesgo de lesión)
+      - Rodilla delantera pasa la punta del pie (riesgo de lesion)
       - Torso inclinado hacia adelante
-      - Contracción en lugar de relajación
+      - Contraccion en lugar de relajacion
 
   - id: breathing_478
-    nombre: "Respiración 4-7-8"
+    nombre: "Respiracion 4-7-8"
     pilar: down-training
     dosis:
       series: 1
@@ -146,24 +146,24 @@ ejercicios:
     vigencia_hasta: null
     activo: true
     instrucciones: |
-      Posición: sentado cómodo, espalda recta, ojos cerrados.
+      Posicion: sentado comodo, espalda recta, ojos cerrados.
       Ciclo (5 repeticiones):
-      1. Inhalación nasal (4 segundos)
-      2. Retención (7 segundos) — el suelo pélvico desciende pero se estabiliza
-      3. Exhalación bucal lenta (8 segundos)
-      Este ejercicio induce un estado profundo de relajación.
+      1. Inhalacion nasal (4 segundos)
+      2. Retencion (7 segundos) — el suelo pelvico desciende pero se estabiliza
+      3. Exhalacion bucal lenta (8 segundos)
+      Este ejercicio induce un estado profundo de relajacion.
     senales_correctas:
-      - La retención de 7 segundos es cómoda (no fuerces)
-      - Sientes relajación profunda después
-      - El suelo pélvico desciende sin contracción
+      - La retencion de 7 segundos es comoda (no fuerces)
+      - Sientes relajacion profunda despues
+      - El suelo pelvico desciende sin contraccion
     senales_error:
-      - Pánico o aceleración del ritmo cardíaco
-      - Contracción voluntaria del suelo pélvico
-      - Mareos (reducí el número de ciclos a 3-4)
+      - Panico o aceleracion del ritmo cardiaco
+      - Contraccion voluntaria del suelo pelvico
+      - Mareos (reduci el numero de ciclos a 3-4)
 
   # ─ MOVILIDAD
   - id: mobility_hip_circles
-    nombre: "Movilidad de cadera — círculos"
+    nombre: "Movilidad de cadera — circulos"
     pilar: movilidad
     dosis:
       series: 1
@@ -175,17 +175,17 @@ ejercicios:
     vigencia_hasta: null
     activo: true
     instrucciones: |
-      Posición: de pie, manos en cintura, pies separados ancho de caderas.
-      Haz 10 círculos amplios con las caderas en sentido horario.
-      Luego 10 círculos en sentido antihorario.
+      Posicion: de pie, manos en cintura, pies separados ancho de caderas.
+      Haz 10 circulos amplios con las caderas en sentido horario.
+      Luego 10 circulos en sentido antihorario.
       Movimiento lento y controlado; respira profundo.
     senales_correctas:
-      - Las caderas trazan un círculo completo y amplio
-      - El suelo pélvico se relaja (desciende) en la parte trasera del círculo
-      - Respiración profunda y sin tensión
+      - Las caderas trazan un circulo completo y amplio
+      - El suelo pelvico se relaja (desciende) en la parte trasera del circulo
+      - Respiracion profunda y sin tension
     senales_error:
       - Movimiento pequeño o tenso
-      - Contracción de glúteos o abdomen
+      - Contraccion de gluteos o abdomen
       - Rigidez en la pelvis
 
   - id: mobility_cat_cow
@@ -201,23 +201,23 @@ ejercicios:
     vigencia_hasta: null
     activo: true
     instrucciones: |
-      Posición: a cuatro puntos (manos bajo hombros, rodillas bajo caderas).
+      Posicion: a cuatro puntos (manos bajo hombros, rodillas bajo caderas).
       Ciclo (10 repeticiones):
-      1. VACA: inhalación, baja el pecho y levanta la cabeza suavemente, el suelo pélvico desciende
-      2. GATO: exhalación, redondea la columna, mete la cabeza, contrae abdomen suavemente
-      Movimiento fluido y sincronizado con la respiración.
+      1. VACA: inhalacion, baja el pecho y levanta la cabeza suavemente, el suelo pelvico desciende
+      2. GATO: exhalacion, redondea la columna, mete la cabeza, contrae abdomen suavemente
+      Movimiento fluido y sincronizado con la respiracion.
     senales_correctas:
       - La columna se mueve como una onda
-      - La respiración sincroniza con el movimiento
-      - El suelo pélvico desciende en la inhalación (vaca)
+      - La respiracion sincroniza con el movimiento
+      - El suelo pelvico desciende en la inhalacion (vaca)
     senales_error:
-      - Movimiento rígido o por tramos
-      - Cabeza caída (mira al frente)
-      - Desincronización con la respiración
+      - Movimiento rigido o por tramos
+      - Cabeza caida (mira al frente)
+      - Desincronizacion con la respiracion
 
-  # ─ UP-TRAINING (Fuerza) — BLOQUEADOS EN HIPERTÓNICO
+  # ─ UP-TRAINING (Fuerza) — BLOQUEADOS EN HIPERTONICO
   - id: kegel_fast
-    nombre: "Kegel de fuerza — rápidos"
+    nombre: "Kegel de fuerza — rapidos"
     pilar: up-training
     dosis:
       series: 2
@@ -235,22 +235,22 @@ ejercicios:
     vigencia_hasta: null
     activo: true
     instrucciones: |
-      ⚠️ SOLO FASE 3 — Solo si la tensión basal es ≤5
-      Contracción máxima rápida del suelo pélvico.
+      ⚠️ SOLO FASE 3 — Solo si la tension basal es ≤5
+      Contraccion maxima rapida del suelo pelvico.
       Ciclo (10 repeticiones):
-      1. Contracción máxima rápida (1 segundo)
-      2. Relajación completa (1 segundo)
+      1. Contraccion maxima rapida (1 segundo)
+      2. Relajacion completa (1 segundo)
       Series: 2 • Descanso entre series: 20 segundos
-      Posición: sentado o acostado cómodo.
+      Posicion: sentado o acostado comodo.
     senales_correctas:
-      - Contracción clara y máxima (como frenar un chorro de orina)
-      - Relajación completa entre cada una
-      - Sin tensión en abdomen, glúteos o muslos
+      - Contraccion clara y maxima (como frenar un chorro de orina)
+      - Relajacion completa entre cada una
+      - Sin tension en abdomen, gluteos o muslos
     senales_error:
-      - Contracción débil o incompleta
-      - Retención de más de 1 segundo
-      - Tensión en abdomen o glúteos
-      - Dolor (detén inmediatamente)
+      - Contraccion debil o incompleta
+      - Retencion de mas de 1 segundo
+      - Tension en abdomen o gluteos
+      - Dolor (deten inmediatamente)
 
   - id: kegel_sustained
     nombre: "Kegel de fuerza — sostenidos"
@@ -270,23 +270,23 @@ ejercicios:
     vigencia_hasta: null
     activo: true
     instrucciones: |
-      ⚠️ SOLO FASE 3 — Solo si la tensión basal es ≤5
-      Contracción máxima sostenida del suelo pélvico.
-      Semana 1-4: contracción 5 seg / relajación 10 seg
-      Aumenta 1 segundo/semana (hasta 10 seg máximo)
+      ⚠️ SOLO FASE 3 — Solo si la tension basal es ≤5
+      Contraccion maxima sostenida del suelo pelvico.
+      Semana 1-4: contraccion 5 seg / relajacion 10 seg
+      Aumenta 1 segundo/semana (hasta 10 seg maximo)
       Series: 2 • Descanso entre series: 30 segundos
-      Posición: sentado o acostado cómodo.
+      Posicion: sentado o acostado comodo.
     senales_correctas:
-      - Contracción máxima pero sostenible sin temblor
-      - Relajación profunda (el doble de la contracción)
-      - Sin tensión en abdomen, glúteos o muslos
-      - Recuperación gradual semana a semana
+      - Contraccion maxima pero sostenible sin temblor
+      - Relajacion profunda (el doble de la contraccion)
+      - Sin tension en abdomen, gluteos o muslos
+      - Recuperacion gradual semana a semana
     senales_error:
-      - Contracción débil o con temblor
-      - Relajación insuficiente (menos del doble)
-      - Tensión en abdomen o glúteos
+      - Contraccion debil o con temblor
+      - Relajacion insuficiente (menos del doble)
+      - Tension en abdomen o gluteos
       - Fatiga excesiva (reduce las series)
-      - Dolor (detén inmediatamente)
+      - Dolor (deten inmediatamente)
 
 # ─── REGISTRO DIARIO ─────────────────────────────────────────────
 
@@ -295,16 +295,16 @@ registro_diario:
     escala_minima: 0
     escala_maxima: 10
     obligatorio: true
-    descripcion: "Tensión de reposo del suelo pélvico (0=relajado, 10=máxima contracción)"
+    descripcion: "Tension de reposo del suelo pelvico (0=relajado, 10=maxima contraccion)"
 
   - variable: control
     escala_minima: 0
     escala_maxima: 10
     obligatorio: false
-    descripcion: "Sensación de control consciente (0=no siento, 10=máximo control)"
+    descripcion: "Sensacion de control consciente (0=no siento, 10=maximo control)"
 
   - variable: sintomas
     escala_minima: 0
     escala_maxima: 10
     obligatorio: false
-    descripcion: "Presencia de síntomas (0=ausente, 10=severo e incapacitante)"
+    descripcion: "Presencia de sintomas (0=ausente, 10=severo e incapacitante)"
