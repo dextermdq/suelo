@@ -42,3 +42,5 @@ Thumbs.db
 # ── Agentes ───────────────────────────────────────────────────────────
 .antigravity/
 .claude/settings.local.json
+
+.vercel
